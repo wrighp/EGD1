@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f1e5727c60cfd438d7f7c7941f7c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasticCost: 1
-  metalCost: 1
+  plasticCost: 0
+  metalCost: 2
   peopleCost: 0
   peopleBonus: 2
-  resourceGenerationTime: 0
+  resourceGenerationTime: 10
   dropResource: {fileID: 0}
 --- !u!212 &212737154217660450
 SpriteRenderer:

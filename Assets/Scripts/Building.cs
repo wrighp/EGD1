@@ -7,8 +7,11 @@ public class Building : MonoBehaviour {
     public int plasticCost = 0;
     public int metalCost = 0;
     public int peopleCost = 0;
+    //While active number of population that is added to the tower
     public int peopleBonus = 0;
+
     public float resourceGenerationTime = 0;
+
     public GameObject dropResource = null;
 
     private float chargeTime = 0f;
@@ -30,7 +33,7 @@ public class Building : MonoBehaviour {
         if (chargeTime >= resourceGenerationTime ) {
             chargeTime = 0;
             if (dropResource != null) {
-                Instantiate(dropResource, transform);
+                Instantiate(dropResource, transform.position, Quaternion.identity);
             }
         }
 

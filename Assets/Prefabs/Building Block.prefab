@@ -56,7 +56,7 @@ MonoBehaviour:
   metalCost: 0
   peopleCost: 0
   peopleBonus: 0
-  resourceGenerationTime: 0
+  resourceGenerationTime: 10
   dropResource: {fileID: 0}
 --- !u!212 &212804139211667288
 SpriteRenderer:

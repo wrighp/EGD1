@@ -9,62 +9,57 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1781326282731788}
+  m_RootGameObject: {fileID: 1465025489751840}
   m_IsPrefabParent: 1
---- !u!1 &1781326282731788
+--- !u!1 &1465025489751840
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4515082187591808}
-  - component: {fileID: 212874969802158900}
-  - component: {fileID: 114107918295401372}
+  - component: {fileID: 4278387934632608}
+  - component: {fileID: 212445492352020162}
+  - component: {fileID: 114513986116541990}
   m_Layer: 0
-  m_Name: Smelter
+  m_Name: Plastic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4515082187591808
+--- !u!4 &4278387934632608
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1781326282731788}
+  m_GameObject: {fileID: 1465025489751840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 20, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114107918295401372
+--- !u!114 &114513986116541990
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1781326282731788}
+  m_GameObject: {fileID: 1465025489751840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f1e5727c60cfd438d7f7c7941f7c9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6390212189a30504792387a41e8ec39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasticCost: 0
-  metalCost: 2
-  peopleCost: 0
-  peopleBonus: 0
-  resourceGenerationTime: 5
-  dropResource: {fileID: 1465025489751840, guid: d4e99c7ad5988b243b506e0253dbb4b2,
-    type: 2}
---- !u!212 &212874969802158900
+  plasticValue: 3
+  metalValue: 0
+--- !u!212 &212445492352020162
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1781326282731788}
+  m_GameObject: {fileID: 1465025489751840}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -94,7 +89,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.08965516, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

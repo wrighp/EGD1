@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerManager : MonoBehaviour {
 
@@ -11,11 +12,15 @@ public class TowerManager : MonoBehaviour {
     [HideInInspector]
     public List<Building> activeBuildings = new List<Building>();
     public float waterLevelSpeed = .15f;
+    public Text[] itemCounters;
 
     private float researchLevel = 0f;
-    private int plasticAmount = 10;
-    private int metalAmount = 10;
-    private int population = 10;
+    [HideInInspector]
+    public int plasticAmount = 10;
+    [HideInInspector]
+    public int metalAmount = 10;
+    [HideInInspector]
+    public int population = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -28,10 +33,10 @@ public class TowerManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Alpha1)){
-            AddTower(1);
-        }
-	}
+        itemCounters[0].text = "p: " + plasticAmount;
+        itemCounters[1].text = "m: " + metalAmount;
+        itemCounters[2].text = "h: " + population;
+    }
 
     public void AddTower(int i) {
         Vector3 pos;    
