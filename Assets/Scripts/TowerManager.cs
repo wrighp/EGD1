@@ -36,6 +36,8 @@ public class TowerManager : MonoBehaviour {
         itemCounters[0].text = "p: " + plasticAmount;
         itemCounters[1].text = "m: " + metalAmount;
         itemCounters[2].text = "h: " + population;
+
+
     }
 
     public void AddTower(int i) {
