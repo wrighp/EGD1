@@ -1,0 +1,26 @@
+Previous Rooms/Floors Breaking:
+
+Break_Flimsy_Wood.wav
+
+Water Noises:
+
+bigwater3.wav
+bigwater4.wav
+bigwater1.wav
+water3.wav (shorter water noise)
+
+Noise of collision:
+
+bones3.wav
+dirt2.wav
+dirt4.wav
+ladder3.wav
+ladder2.wav
+land_steel.wav (more of a heavier tone)
+run_glass_3.wav
+run_rock_3.wav
+fall1.wav
+fall2.wav
+
+Noises Missing:
+Interactivity (Highlighting something, clicking a button or inputting an action)
