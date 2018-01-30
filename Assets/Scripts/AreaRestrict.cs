@@ -26,7 +26,7 @@ public class AreaRestrict : MonoBehaviour {
 		float viewUp = camY + camera.orthographicSize;
 
 		if(viewDown <= minHeight){
-			camera.transform.position = new Vector3(0,camY - viewDown + minHeight,0);
+			camera.transform.position = new Vector3(0,camY - viewDown + minHeight,camera.transform.position.z);
 		}
 		else{
 			/*var building = towerManager.GetHighestBuilding();
