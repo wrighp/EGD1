@@ -32,6 +32,9 @@ public class TowerManager : MonoBehaviour {
         } else {
             Destroy(this);
         }
+
+		AddTower(0);
+		AddTower(0);
 	}
 	
 	// Update is called once per frame
@@ -46,7 +49,7 @@ public class TowerManager : MonoBehaviour {
     public void AddTower(int i) {
         Vector3 pos;    
         if (activeBuildings.Count == 0) {
-            pos = new Vector3(0, transform.position.y + 1.65f, 0);
+            pos = new Vector3(0, transform.position.y, 0);
         } else {
             pos = new Vector3(0, activeBuildings[activeBuildings.Count - 1].transform.position.y + towerHeight, 0);
         }
