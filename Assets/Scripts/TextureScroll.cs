@@ -5,7 +5,8 @@ using UnityEngine;
 public class TextureScroll : MonoBehaviour {
 
     public float currentscroll = 0.0f;
-    public float speed = 0.01f;
+    public float scrollAmount = 1f;
+    public float period = 1f;
     private Material _material;
 
     void Start(){
@@ -13,8 +14,8 @@ public class TextureScroll : MonoBehaviour {
     }
 
     void Update(){
-        currentscroll += speed * Time.deltaTime;
-        currentscroll = currentscroll % 1;
+        currentscroll = Mathf.Sin(Time.realtimeSinceStartup / period) * scrollAmount;
+        //currentscroll = currentscroll % 1;
         _material.mainTextureOffset = new Vector2(-currentscroll, 0);
     }
 }
