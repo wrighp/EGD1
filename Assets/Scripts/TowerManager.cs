@@ -52,4 +52,13 @@ public class TowerManager : MonoBehaviour {
         activeBuildings.Add(go.GetComponent<Building>());
 
     }
+
+	public Building GetHighestBuilding(){
+		if(activeBuildings.Count == 0){
+			return null;
+		}
+		return activeBuildings[activeBuildings.Count - 1];
+	}
+
+
 }
