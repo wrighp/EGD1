@@ -12,6 +12,7 @@ public class TowerManager : MonoBehaviour {
     [HideInInspector]
     public List<Building> activeBuildings = new List<Building>();
     public float waterLevelSpeed = .15f;
+	public float towerHeight = 3f;
     public Text[] itemCounters;
 
     private float researchLevel = 0f;
@@ -45,7 +46,7 @@ public class TowerManager : MonoBehaviour {
         if (activeBuildings.Count == 0) {
             pos = new Vector3(0, transform.position.y + 1.65f, 0);
         } else {
-            pos = new Vector3(0, activeBuildings[activeBuildings.Count - 1].transform.position.y + 3.25f, 0);
+            pos = new Vector3(0, activeBuildings[activeBuildings.Count - 1].transform.position.y + towerHeight, 0);
         }
         GameObject go = Instantiate(buildingTypes[i], pos, Quaternion.identity);
         activeBuildings.Add(go.GetComponent<Building>());
