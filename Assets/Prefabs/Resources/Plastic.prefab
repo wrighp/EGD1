@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212445492352020162}
   - component: {fileID: 114513986116541990}
   m_Layer: 0
-  m_Name: PlasticResource
+  m_Name: Plastic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b31eec9e4ee0aa0408b4027f3aa9ec07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ef988011768bb041a0d42e52184e484, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
