@@ -39,10 +39,10 @@ public class TowerManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        itemCounters[0].text = plasticAmount.ToString();
-        itemCounters[1].text = metalAmount.ToString();
-        itemCounters[2].text = population.ToString();
-
+        itemCounters[0].text = population.ToString();
+        itemCounters[1].text = plasticAmount.ToString();
+        itemCounters[2].text = metalAmount.ToString();
+        itemCounters[2].text = greenhouseAmount.ToString();
 
     }
 
