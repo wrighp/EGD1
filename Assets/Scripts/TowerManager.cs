@@ -21,6 +21,8 @@ public class TowerManager : MonoBehaviour {
     [HideInInspector]
     public int metalAmount = 10;
     [HideInInspector]
+    public int greenhouseAmount = 10;
+    [HideInInspector]
     public int population = 10;
 
 	// Use this for initialization
@@ -34,9 +36,9 @@ public class TowerManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        itemCounters[0].text = "p: " + plasticAmount;
-        itemCounters[1].text = "m: " + metalAmount;
-        itemCounters[2].text = "h: " + population;
+        itemCounters[0].text = plasticAmount.ToString();
+        itemCounters[1].text = metalAmount.ToString();
+        itemCounters[2].text = population.ToString();
 
 
     }

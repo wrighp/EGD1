@@ -7,6 +7,7 @@ public class Resource : MonoBehaviour {
 
     public int plasticValue;
     public int metalValue;
+    public int greenhouseValue;
 
     private float travelTimeCurrent = 0;
     private float travelTimeMax = 3;
@@ -14,14 +15,12 @@ public class Resource : MonoBehaviour {
     private Vector3 startPoint;
     private Vector3 endPoint;
     private Vector3 controlPoint1;
-    // Use this for initialization
+
     void Start () {
         startPoint = this.transform.position;
         Vector3 tmp = TowerManager.i.itemCounters[0].rectTransform.position;
         endPoint = Camera.main.ScreenToWorldPoint(new Vector3(tmp.x, tmp.y, 0));
         controlPoint1 = new Vector3(endPoint.x, startPoint.y, 0);
-        print("["+startPoint+"], "+ "[" + controlPoint1 + "], " + "[" + endPoint + "]" );
-
     }
 	
 	// Update is called once per frame
@@ -31,6 +30,7 @@ public class Resource : MonoBehaviour {
         if (travelTimeCurrent >= travelTimeMax){
             TowerManager.i.plasticAmount += plasticValue;
             TowerManager.i.metalAmount += metalValue;
+            TowerManager.i.greenhouseAmount += greenhouseValue;
             Destroy(this.gameObject);
         }
 	}
