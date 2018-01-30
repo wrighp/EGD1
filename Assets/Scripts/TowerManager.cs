@@ -11,7 +11,7 @@ public class TowerManager : MonoBehaviour {
     public static TowerManager i = null;
     [HideInInspector]
     public List<Building> activeBuildings = new List<Building>();
-    public float waterLevelSpeed = .15f;
+    public float waterLevelBaseSpeed = .15f;
 	public float towerHeight = 3f;
     public Text[] itemCounters;
 
@@ -65,5 +65,9 @@ public class TowerManager : MonoBehaviour {
 		return activeBuildings[activeBuildings.Count - 1];
 	}
 
+	//Water speed after changes
+	public float GetWaterSpeed(){
+		return waterLevelBaseSpeed;
+	}
 
 }
