@@ -57,7 +57,7 @@ MonoBehaviour:
   peopleCost: 0
   peopleBonus: 0
   resourceGenerationTime: 5
-  dropResource: {fileID: 1465025489751840, guid: d4e99c7ad5988b243b506e0253dbb4b2,
+  dropResource: {fileID: 1749699701606024, guid: e0398f124d875dc4385a11baf0c387f6,
     type: 2}
 --- !u!212 &212874969802158900
 SpriteRenderer:
