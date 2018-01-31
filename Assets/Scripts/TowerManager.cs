@@ -19,14 +19,49 @@ public class TowerManager : MonoBehaviour {
     public float emissionLevel = 0f;
     [HideInInspector]
     public float researchLevel = 0f;
-    [HideInInspector]
-    public int plasticAmount = 14;
-    [HideInInspector]
-    public int metalAmount = 14;
-    [HideInInspector]
-    public int greenhouseAmount = 10;
-    [HideInInspector]
-    public int population = 10;
+   
+
+	int plasticAmount = 14;
+	public int PlasticAmount {
+		get {
+			return plasticAmount;
+		}
+		set {
+			plasticAmount = value;
+		}
+	}
+	int metalAmount = 14;
+
+	public int MetalAmount {
+		get {
+			return metalAmount;
+		}
+		set {
+			metalAmount = value;
+		}
+	}
+   
+	int greenhouseAmount = 10;
+
+	public int GreenhouseAmount {
+		get {
+			return greenhouseAmount;
+		}
+		set {
+			greenhouseAmount = value;
+		}
+	}
+
+	int population = 10;
+
+	public int Population {
+		get {
+			return population;
+		}
+		set {
+			population = value;
+		}
+	}
 
     private Slider researchSlider;
 
@@ -65,6 +100,9 @@ public class TowerManager : MonoBehaviour {
         GameObject go = Instantiate(buildingTypes[i], pos, Quaternion.identity);
         activeBuildings.Add(go.GetComponent<Building>());
 
+		string[] sounds = { "fall1","fall2" };
+		//string[] sounds = { "dirt2", "dirt4","fall1","fall2" };
+		SoundManager.GetSound(sounds.Pick(),pitchShiftRange: .1f).Play();
     }
 
 	public Building GetHighestBuilding(){

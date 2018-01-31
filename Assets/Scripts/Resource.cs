@@ -21,6 +21,10 @@ public class Resource : MonoBehaviour {
         Vector3 tmp = TowerManager.i.itemCounters[0].rectTransform.position;
         endPoint = Camera.main.ScreenToWorldPoint(new Vector3(tmp.x, tmp.y, 0));
         controlPoint1 = new Vector3(endPoint.x, startPoint.y, 0);
+
+		var startSound = SoundManager.GetSound("run_rock_3",pitchShiftRange: .1f);
+		startSound.volume = .5f;
+		startSound.Play();
     }
 	
 	// Update is called once per frame
@@ -28,11 +32,27 @@ public class Resource : MonoBehaviour {
         travelTimeCurrent = Mathf.Clamp(travelTimeCurrent + Time.deltaTime,0,travelTimeMax);
         transform.position = CubeBezier3(startPoint, controlPoint1, endPoint, endPoint, travelTimeCurrent/travelTimeMax);
         if (travelTimeCurrent >= travelTimeMax){
-            TowerManager.i.plasticAmount += plasticValue;
-            TowerManager.i.metalAmount += metalValue;
-            TowerManager.i.greenhouseAmount += greenhouseValue;
+			TowerManager.i.PlasticAmount += plasticValue;
+			TowerManager.i.MetalAmount += metalValue;
+            TowerManager.i.GreenhouseAmount += greenhouseValue;
+
+			ResourceNoise();
+
             Destroy(this.gameObject);
         }
+	}
+
+	void ResourceNoise(){
+		if(plasticValue > 0){
+			SoundManager.GetSound("run_glass_3",pitchShiftRange: .1f).Play();
+		}
+		if(metalValue > 0){
+			SoundManager.GetSound("ladder2",pitchShiftRange: .1f).Play();
+		}
+		if(greenhouseValue > 0){
+			string[] dirtSounds = { "dirt2","dirt4" };
+			SoundManager.GetSound(dirtSounds.Pick(),pitchShiftRange: .1f).Play();
+		}
 	}
 
     public static Vector3 CubeBezier3(Vector3 start, Vector3 control1, Vector3 control2, Vector3 end, float time)

@@ -22,10 +22,10 @@ public class Building : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        TowerManager.i.plasticAmount -= plasticCost;
-        TowerManager.i.metalAmount -= plasticCost;
-        TowerManager.i.population += peopleBonus;
-        TowerManager.i.greenhouseAmount -= greenhouseCost;
+		TowerManager.i.PlasticAmount -= plasticCost;
+		TowerManager.i.MetalAmount -= plasticCost;
+		TowerManager.i.Population += peopleBonus;
+		TowerManager.i.GreenhouseAmount -= greenhouseCost;
         TowerManager.i.emissionLevel += carbonEmission;
     }
 	
@@ -56,5 +56,9 @@ public class Building : MonoBehaviour {
         TowerManager.i.activeBuildings.Remove(this);
         TowerManager.i.emissionLevel -= carbonEmission;
 
+		SoundManager.GetSound("Break_Flimsy_Wood", pitchShiftRange: .15f).Play();
+
+		string[] sounds = { "bigwater3", "bigwater1","bigwater4" };
+		SoundManager.GetSound(sounds.Pick(),pitchShiftRange: .1f).Play();
     }
 }
