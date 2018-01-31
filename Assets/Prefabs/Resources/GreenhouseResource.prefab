@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6390212189a30504792387a41e8ec39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasticValue: 3
+  plasticValue: 0
   metalValue: 0
-  greenhouseValue: 0
+  greenhouseValue: 3
 --- !u!212 &212744757126122294
 SpriteRenderer:
   m_ObjectHideFlags: 1
