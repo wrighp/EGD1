@@ -11,29 +11,28 @@ public class AreaRestrict : MonoBehaviour {
 	public float minHeight;
 	public float extraHeight = 1f;
 
-	Camera camera;
+	Camera cam;
 
 	// Use this for initialization
 	void Start () {
-		camera = Camera.main;
+		cam = Camera.main;
 	}
 
 	void Update(){
 		//Move camera against water to make it look like it is rising
-		camera.transform.position += new Vector3(0,Time.deltaTime * -towerManager.GetWaterSpeed(),0);
+		cam.transform.position += new Vector3(0,Time.deltaTime * -towerManager.GetWaterSpeed(),0);
 	}
 
 	// Update is called once per frame
 	void LateUpdate () {
-		Transform camTransform = camera.transform;
+		Transform camTransform = cam.transform;
 		float camY = camTransform.position.y;
-		float viewDown = camY - camera.orthographicSize;
-		float viewUp = camY + camera.orthographicSize;
+		float viewDown = camY - cam.orthographicSize;
 
 		//Clamps camera between it's upper and lower bounds defined by minHeight and extraHeight after tower
 
 		if(viewDown <= minHeight){
-			camera.transform.position = new Vector3(0,camY - viewDown + minHeight,camera.transform.position.z);
+			cam.transform.position = new Vector3(0,camY - viewDown + minHeight,cam.transform.position.z);
 		}
 		else{
 			var building = towerManager.GetHighestBuilding();
@@ -43,7 +42,7 @@ public class AreaRestrict : MonoBehaviour {
 			}
 
 			if(camY > towHeight){
-				camera.transform.position = new Vector3(0,Mathf.Max(towHeight,camY - viewDown + minHeight),camera.transform.position.z);
+				cam.transform.position = new Vector3(0,Mathf.Max(towHeight,camY - viewDown + minHeight),cam.transform.position.z);
 			}
 
 		}
@@ -51,7 +50,7 @@ public class AreaRestrict : MonoBehaviour {
 
 	void OnDrawGizmosSelected()
 	{
-		if(camera == null){
+		if(cam == null){
 			return;
 		}
 		Gizmos.color = Color.red;
@@ -59,7 +58,7 @@ public class AreaRestrict : MonoBehaviour {
 		Gizmos.DrawLine(vec + Vector3.left * 20f, vec + Vector3.right * 20f);
 
 		var building = towerManager.GetHighestBuilding();
-		float towHeight = extraHeight + camera.orthographicSize;
+		float towHeight = extraHeight + cam.orthographicSize;
 		if(building != null){
 			towHeight += building.transform.position.y;
 		}

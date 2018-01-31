@@ -9,8 +9,6 @@ public class ScreenDrag : MonoBehaviour {
 	public Transform moveTarget;
 	public Vector3 scrollSpeed = Vector3.up; //Negative for moving other direction
 
-	int down = 0;
-
 	void Start()
 	{
 		if(moveTarget == null){
