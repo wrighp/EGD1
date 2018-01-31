@@ -60,7 +60,8 @@ MonoBehaviour:
   researchValue: 0
   carbonEmission: 0.05
   resourceGenerationTime: 10
-  dropResource: {fileID: 0}
+  dropResource: {fileID: 1465025489751840, guid: d4e99c7ad5988b243b506e0253dbb4b2,
+    type: 2}
 --- !u!212 &212737154217660450
 SpriteRenderer:
   m_ObjectHideFlags: 1

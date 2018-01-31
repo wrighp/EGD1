@@ -27,7 +27,11 @@ public class TowerManager : MonoBehaviour {
 			return plasticAmount;
 		}
 		set {
+			if(plasticAmount != value && itemCounters[1].gameObject.GetComponent<SizeLerper>() == null){
+				itemCounters[1].gameObject.AddComponent<SizeLerper>().scaleAmount = plasticAmount < value ? 1.5f : .5f;
+			}
 			plasticAmount = value;
+
 		}
 	}
 	int metalAmount = 14;
@@ -37,6 +41,9 @@ public class TowerManager : MonoBehaviour {
 			return metalAmount;
 		}
 		set {
+			if(metalAmount != value && itemCounters[2].gameObject.GetComponent<SizeLerper>() == null){
+				itemCounters[2].gameObject.AddComponent<SizeLerper>().scaleAmount = metalAmount < value ? 1.5f : .5f;
+			}
 			metalAmount = value;
 		}
 	}
@@ -48,6 +55,9 @@ public class TowerManager : MonoBehaviour {
 			return greenhouseAmount;
 		}
 		set {
+			if(greenhouseAmount != value && itemCounters[3].gameObject.GetComponent<SizeLerper>() == null){
+				itemCounters[3].gameObject.AddComponent<SizeLerper>().scaleAmount = greenhouseAmount < value ? 1.5f : .5f;
+			}
 			greenhouseAmount = value;
 		}
 	}
@@ -59,6 +69,9 @@ public class TowerManager : MonoBehaviour {
 			return population;
 		}
 		set {
+			if(population != value &&	itemCounters[0].gameObject.GetComponent<SizeLerper>() == null){
+				itemCounters[0].gameObject.AddComponent<SizeLerper>().scaleAmount = population < value ? 1.5f : .5f;
+			}
 			population = value;
 		}
 	}
