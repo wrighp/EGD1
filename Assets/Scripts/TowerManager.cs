@@ -86,6 +86,9 @@ public class TowerManager : MonoBehaviour {
             Destroy(this);
         }
 
+        object[] tmp = { -1, "TowerTest" };
+        GetComponent<FadeSystem>().StartCoroutine("PerformFade", tmp);
+
         researchSlider = GameObject.FindObjectOfType<Slider>();
         researchSlider.value = 0;
 
