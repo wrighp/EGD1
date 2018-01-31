@@ -19,7 +19,8 @@ public class TowerManager : MonoBehaviour {
     public float emissionLevel = 0f;
     [HideInInspector]
     public float researchLevel = 0f;
-   
+
+    bool gameOver = false;
 
 	int plasticAmount = 14;
 	public int PlasticAmount {
@@ -104,11 +105,17 @@ public class TowerManager : MonoBehaviour {
         itemCounters[2].text = metalAmount.ToString();
         itemCounters[3].text = greenhouseAmount.ToString();
         researchSlider.value = researchLevel;
+
+        if (activeBuildings.Count == 0 && gameOver == false) {
+            object[] tmp = { 1, "Title" };
+            GetComponent<FadeSystem>().StartCoroutine("PerformFade", tmp);
+            gameOver = true;
+        }
     }
 
     public void AddTower(int i) {
         Vector3 pos;    
-        if (activeBuildings.Count == 0) {
+        if (activeBuildings.Count == 0 && gameOver == false) {
             pos = new Vector3(0, transform.position.y, 0);
         } else {
             pos = new Vector3(0, activeBuildings[activeBuildings.Count - 1].transform.position.y + towerHeight, 0);
