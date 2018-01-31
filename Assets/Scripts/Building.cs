@@ -7,8 +7,11 @@ public class Building : MonoBehaviour {
     public int plasticCost = 0;
     public int metalCost = 0;
     public int peopleCost = 0;
+    public int greenhouseCost = 0;
     //While active number of population that is added to the tower
     public int peopleBonus = 0;
+    public float researchValue = .01f;
+    public float carbonEmission = .01f;
 
     public float resourceGenerationTime = 0;
 
@@ -19,13 +22,18 @@ public class Building : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        TowerManager.i.plasticAmount -= plasticCost;
+        TowerManager.i.metalAmount -= plasticCost;
+        TowerManager.i.population += peopleBonus;
+        TowerManager.i.greenhouseAmount -= greenhouseCost;
+        TowerManager.i.emissionLevel += carbonEmission;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        transform.Translate(Vector3.down * Time.deltaTime * TowerManager.i.GetWaterSpeed());
+        transform.Translate(Vector3.down * Time.deltaTime * (TowerManager.i.GetWaterSpeed() * Mathf.Clamp01(1-TowerManager.i.researchLevel)));
+        TowerManager.i.researchLevel += researchValue * Time.deltaTime; 
 
         if (isDestroyed) return;
 
@@ -46,5 +54,7 @@ public class Building : MonoBehaviour {
         isDestroyed = true;
         GetComponent<SpriteRenderer>().color = new Color(.5f, .5f, .5f);
         TowerManager.i.activeBuildings.Remove(this);
+        TowerManager.i.emissionLevel -= carbonEmission;
+
     }
 }

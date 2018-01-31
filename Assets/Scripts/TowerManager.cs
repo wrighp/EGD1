@@ -15,15 +15,20 @@ public class TowerManager : MonoBehaviour {
 	public float towerHeight = 3f;
     public Text[] itemCounters;
 
-    private float researchLevel = 0f;
     [HideInInspector]
-    public int plasticAmount = 10;
+    public float emissionLevel = 0f;
     [HideInInspector]
-    public int metalAmount = 10;
+    public float researchLevel = 0f;
+    [HideInInspector]
+    public int plasticAmount = 14;
+    [HideInInspector]
+    public int metalAmount = 14;
     [HideInInspector]
     public int greenhouseAmount = 10;
     [HideInInspector]
     public int population = 10;
+
+    private Slider researchSlider;
 
 	// Use this for initialization
 	void Start () {
@@ -33,17 +38,21 @@ public class TowerManager : MonoBehaviour {
             Destroy(this);
         }
 
+        researchSlider = GameObject.FindObjectOfType<Slider>();
+        researchSlider.value = 0;
+
 		AddTower(0);
 		AddTower(0);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        itemCounters[0].text = plasticAmount.ToString();
-        itemCounters[1].text = metalAmount.ToString();
-        itemCounters[2].text = population.ToString();
-
-
+        itemCounters[0].text = population.ToString();
+        itemCounters[1].text = plasticAmount.ToString();
+        itemCounters[2].text = metalAmount.ToString();
+        itemCounters[3].text = greenhouseAmount.ToString();
+        researchSlider.value = researchLevel;
     }
 
     public void AddTower(int i) {

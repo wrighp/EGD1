@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1931978700436430}
+  m_RootGameObject: {fileID: 1781326282731788}
   m_IsPrefabParent: 1
---- !u!1 &1931978700436430
+--- !u!1 &1781326282731788
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4968048229794852}
-  - component: {fileID: 212804139211667288}
-  - component: {fileID: 114684639945777946}
+  - component: {fileID: 4515082187591808}
+  - component: {fileID: 212874969802158900}
+  - component: {fileID: 114107918295401372}
   m_Layer: 0
-  m_Name: Building Block
+  m_Name: Smelter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4968048229794852
+--- !u!4 &4515082187591808
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1931978700436430}
+  m_GameObject: {fileID: 1781326282731788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
@@ -41,29 +41,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114684639945777946
+--- !u!114 &114107918295401372
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1931978700436430}
+  m_GameObject: {fileID: 1781326282731788}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50f1e5727c60cfd438d7f7c7941f7c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasticCost: 2
+  plasticCost: 1
   metalCost: 0
-  peopleCost: 0
+  peopleCost: 1
+  greenhouseCost: 0
   peopleBonus: 0
+  researchValue: 0
+  carbonEmission: 0.05
   resourceGenerationTime: 10
-  dropResource: {fileID: 0}
---- !u!212 &212804139211667288
+  dropResource: {fileID: 1749699701606024, guid: e0398f124d875dc4385a11baf0c387f6,
+    type: 2}
+--- !u!212 &212874969802158900
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1931978700436430}
+  m_GameObject: {fileID: 1781326282731788}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -92,7 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae8b716146232b2438df4a965055e20e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7197a5aa06129084dba056f148d980f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
