@@ -52,10 +52,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f1e5727c60cfd438d7f7c7941f7c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasticCost: 2
-  metalCost: 0
-  peopleCost: 2
+  plasticCost: 1
+  metalCost: 1
+  peopleCost: 0
+  greenhouseCost: 0
   peopleBonus: 0
+  researchValue: 0
+  carbonEmission: -0.1
   resourceGenerationTime: 10
   dropResource: {fileID: 1249042549046230, guid: bd97fd03e091ff54e897069038b9380e,
     type: 2}

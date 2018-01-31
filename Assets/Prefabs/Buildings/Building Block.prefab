@@ -55,7 +55,10 @@ MonoBehaviour:
   plasticCost: 2
   metalCost: 0
   peopleCost: 0
+  greenhouseCost: 0
   peopleBonus: 0
+  researchValue: 0
+  carbonEmission: 0
   resourceGenerationTime: 10
   dropResource: {fileID: 0}
 --- !u!212 &212804139211667288

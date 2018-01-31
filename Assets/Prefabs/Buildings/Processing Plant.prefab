@@ -54,8 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plasticCost: 0
   metalCost: 2
-  peopleCost: 0
-  peopleBonus: 2
+  peopleCost: 1
+  greenhouseCost: 0
+  peopleBonus: 0
+  researchValue: 0
+  carbonEmission: 0.05
   resourceGenerationTime: 10
   dropResource: {fileID: 0}
 --- !u!212 &212737154217660450
