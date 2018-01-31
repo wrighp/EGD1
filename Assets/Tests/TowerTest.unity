@@ -113,6 +113,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &18877925 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1005717495823260, guid: 56a2b7e902211be459bacc8e939bfcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580893829}
+--- !u!114 &18877927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18877925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68523ee8f3116514aa6f7e0af856264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasticAmount: 1
+  metalAmount: 0
+  greenhouseAmount: 0
+  peopleAmount: 1
 --- !u!1001 &32084394
 Prefab:
   m_ObjectHideFlags: 0
@@ -395,6 +415,66 @@ MonoBehaviour:
   - {fileID: 32084396}
   emissionLevel: 0
   researchLevel: 0
+--- !u!1 &265772504 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1342477383782034, guid: 56a2b7e902211be459bacc8e939bfcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580893829}
+--- !u!114 &265772506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265772504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68523ee8f3116514aa6f7e0af856264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasticAmount: 1
+  metalAmount: 1
+  greenhouseAmount: 0
+  peopleAmount: 1
+--- !u!1 &409640966 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1814997297339124, guid: 56a2b7e902211be459bacc8e939bfcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580893829}
+--- !u!114 &409640968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409640966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68523ee8f3116514aa6f7e0af856264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasticAmount: 2
+  metalAmount: 0
+  greenhouseAmount: 0
+  peopleAmount: 0
+--- !u!1 &421841378 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1143659161950436, guid: 56a2b7e902211be459bacc8e939bfcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580893829}
+--- !u!114 &421841380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421841378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68523ee8f3116514aa6f7e0af856264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasticAmount: 1
+  metalAmount: 0
+  greenhouseAmount: 2
+  peopleAmount: 0
 --- !u!1001 &428800065
 Prefab:
   m_ObjectHideFlags: 0
@@ -754,6 +834,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &749238322 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1785692236947912, guid: 56a2b7e902211be459bacc8e939bfcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580893829}
+--- !u!114 &749238324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749238322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68523ee8f3116514aa6f7e0af856264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasticAmount: 0
+  metalAmount: 2
+  greenhouseAmount: 0
+  peopleAmount: 1
 --- !u!1 &862046174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,3 +1677,23 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224898130661403662, guid: 9eb57a6f4cfb88f419154c7734e1c5e0,
     type: 2}
   m_PrefabInternal: {fileID: 1921133278}
+--- !u!1 &1949969617 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1151712497715016, guid: 56a2b7e902211be459bacc8e939bfcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580893829}
+--- !u!114 &1949969619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1949969617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68523ee8f3116514aa6f7e0af856264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasticAmount: 1
+  metalAmount: 1
+  greenhouseAmount: 0
+  peopleAmount: 1

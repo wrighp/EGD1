@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plasticCost: 1
   metalCost: 1
-  peopleCost: 0
+  peopleCost: 1
   greenhouseCost: 0
   peopleBonus: 0
   researchValue: 0

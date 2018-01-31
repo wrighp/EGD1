@@ -23,7 +23,7 @@ public class Building : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		TowerManager.i.PlasticAmount -= plasticCost;
-		TowerManager.i.MetalAmount -= plasticCost;
+		TowerManager.i.MetalAmount -= metalCost;
 		TowerManager.i.Population += peopleBonus;
 		TowerManager.i.GreenhouseAmount -= greenhouseCost;
         TowerManager.i.emissionLevel += carbonEmission;
